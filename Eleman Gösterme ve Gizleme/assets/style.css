@@ -14,14 +14,14 @@ body {
     font-weight: bold;
     font-size: 24px;
   }
-  .d1 {
+  .div1 {
     height: 200px;
     width: 200px;
     background-color: brown;
     border-radius: 100px;
 
   }
-  .d2 {
+  .div2 {
     height: 200px;
     width: 200px;
     background-color: chartreuse;
@@ -31,7 +31,7 @@ body {
   .buttons {
     margin-top: 20px;
   }
-  .b1 {
+  .button-show {
     height: 50px;
     width: 150px;
     background-color: darkorange;
@@ -41,12 +41,12 @@ body {
     color: black;
     margin-right: 30px;
   }
-  .b1:hover,
-  .b2:hover,
-  .b3:hover {
+  .button-show:hover,
+  .button-hidden:hover,
+  .button-transition:hover {
     cursor: pointer;
   }
-  .b2 {
+  .button-hide {
     height: 50px;
     width: 150px;
     background-color: darkorange;
@@ -56,7 +56,7 @@ body {
     color: black;
     margin-right: 30px;
   }
-  .b3 {
+  .button-transition {
     height: 50px;
     width: 150px;
     background-color: darkorange;
@@ -66,13 +66,13 @@ body {
     color: black;
   }
   
-  .goster {
+  .show {
     display: block;
   }
-  .gizle {
+  .hidden {
     display: none;
   }
-  .geciş {
+  .transition {
     display: none;
   }
   
