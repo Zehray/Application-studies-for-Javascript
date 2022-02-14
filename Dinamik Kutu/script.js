@@ -18,14 +18,30 @@ var rightSide = document.getElementsByClassName("right")[0];
 
 boxCreate.addEventListener("click", createDiv);
 function createDiv(){
-    rightSide.style.width = boxWidth.value + "px";
+   /* rightSide.style.width = boxWidth.value + "px";
     rightSide.style.height = boxHeight.value + "px";
     rightSide.style.backgroundColor = backgroundColor.value;
     rightSide.style.borderWidth = borderWidth.value;
     rightSide.style.borderStyle = borderType.value;
     rightSide.style.borderColor = borderColor.value;
-    rightSide.style.margin = boxMargin.value;
-    rightSide.style.padding = boxPadding.value;
+    rightSide.style.margin = boxMargin.value + "px";
+    rightSide.style.padding = boxPadding.value+ "px";
 
-    rightSide.style.transform = "rotate("+rotate.value+"deg)";
+    rightSide.style.transform = "rotate("+rotate.value+"deg)"; */
+
+    /* Template Literals */
+
+   // `boxCreate${boxCreate}`
+
+   rightSide.style.cssText = `
+   width:${boxWidth.value}px;
+   height:${boxHeight.value}px;
+   background-color:${backgroundColor.value};
+   border-width: ${borderWidth.value};
+   border-style: ${borderType.value};
+   border-color: ${borderColor.value};
+   margin: ${boxMargin.value}px;
+   padding: ${boxPadding.value}px;
+   transform: rotate(${rotate.value}deg);
+   `;
 }
