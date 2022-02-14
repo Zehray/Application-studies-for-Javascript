@@ -3,7 +3,7 @@ console.log(button); // 16 button
 
 let screen = document.getElementsByClassName("ekran1")[0];
 let calculate = document.getElementById("hesapla");
-let delete = document.getElementById("temizle");
+let temizle = document.getElementById("temizle");
 
 for(var i=0; i<16; i++){
     if(i!=12 && i!=14){
@@ -20,7 +20,7 @@ function hesapla(){
     screen.value = eval(screen.value) ;
 }
 
-delete.addEventListener("click", sil);
+temizle.addEventListener("click", sil);
 function sil() {
     screen.value="";
 }
