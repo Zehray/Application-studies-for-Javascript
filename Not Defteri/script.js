@@ -30,6 +30,7 @@ deleted();
 /* Missions */
 
 var mission = document.getElementsByTagName("input")[0];
+
 //console.log(mission);
 mission.addEventListener("keypress", function(e){
     //console.log(e.keyCode);
@@ -47,10 +48,10 @@ mission.addEventListener("keypress", function(e){
         var missions = document.getElementsByTagName("ul")[0];
 
         missions.insertBefore(newNote, missions.lastChild);
+        mission.value="";
     }
     deleted();
     completed();
    
 
 })
-mission.value="";
