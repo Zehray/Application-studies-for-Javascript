@@ -1,6 +1,7 @@
 /* completed tasks */
 
-var listItems = document.getElementsByTagName("li");
+function completed(){
+    var listItems = document.getElementsByTagName("li");
 console.log(listItems);
 
 for (var i=0; i<listItems.length; i++){
@@ -10,10 +11,12 @@ for (var i=0; i<listItems.length; i++){
 
     });
 };
-
+}
+completed();
 
 /* deleted tasks */
-var deleteButtons = document.getElementsByTagName("span");
+function deleted(){
+    var deleteButtons = document.getElementsByTagName("span");
 console.log(deleteButtons);
 
 for (var j=0; j<deleteButtons.length; j++){
@@ -22,3 +25,32 @@ for (var j=0; j<deleteButtons.length; j++){
         deleteing.remove();
     });
 };
+}
+deleted();
+/* Missions */
+
+var mission = document.getElementsByTagName("input")[0];
+//console.log(mission);
+mission.addEventListener("keypress", function(e){
+    //console.log(e.keyCode);
+    if(e.keyCode===13){
+        //alert("Enter'a basıldı")
+        var newNote = document.createElement("li");
+        newNote.innerHTML = mission.value;
+        var newSpan = document.createElement("span");
+        var newIcon =document.createElement("i");
+        newIcon.setAttribute("class", "fa fa-window-close");
+
+        newSpan.insertBefore(newIcon, newSpan.firstChild);
+        newNote.insertBefore(newSpan, newNote.firstChild);
+
+        var missions = document.getElementsByTagName("ul")[0];
+
+        missions.insertBefore(newNote, missions.lastChild);
+    }
+    deleted();
+    completed();
+   
+
+})
+mission.value="";
