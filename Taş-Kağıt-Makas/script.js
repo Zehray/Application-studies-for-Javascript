@@ -29,7 +29,46 @@
 
  function eventListeners(){
      tas.addEventListener("click", function(){
-         bilgisayarSecim();
+        oyuncu_secimi.setAttribute("src", `images/tas.png`);
+         let bil_secim = bilgisayarSecim();
+         sonuc("tas", bil_secim);
+     });
+     kagit.addEventListener("click", function(){
+        oyuncu_secimi.setAttribute("src", `images/kagit.png`);
+        let bil_secim = bilgisayarSecim();
+        sonuc("kagit", bil_secim);
+     });
+     makas.addEventListener("click", function(){
+        oyuncu_secimi.setAttribute("src", `images/makas.png`);
+        let bil_secim = bilgisayarSecim();
+        sonuc("makas", bil?secim);
      });
  }
  eventListeners();
+/* Sonuç Olayı */
+ function sonuc(oyuncu, bilgisayar){
+
+    switch(oyuncu+bilgisayar){
+        case "tasmakas":
+        case "kagittas":
+        case "makaskagit": 
+            kazan();
+        break;
+
+        case "taskagit":
+        case "kagitmakas":
+        case "makastas": 
+            kaybet();
+        break;
+        default: "HATA";
+
+        case "tastas":
+        case "kagitkagit":
+        case "makasmakas": 
+            berabere();
+        break;
+        default: "HATA";
+    }
+
+ }
+ /* Sonuc Olayı */
