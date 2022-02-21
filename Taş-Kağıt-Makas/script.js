@@ -41,7 +41,7 @@
      makas.addEventListener("click", function(){
         oyuncu_secimi.setAttribute("src", `images/makas.png`);
         let bil_secim = bilgisayarSecim();
-        sonuc("makas", bil?secim);
+        sonuc("makas", bil_secim);
      });
  }
  eventListeners();
@@ -60,15 +60,32 @@
         case "makastas": 
             kaybet();
         break;
-        default: "HATA";
 
         case "tastas":
         case "kagitkagit":
         case "makasmakas": 
             berabere();
         break;
-        default: "HATA";
+        default:"HATA";
     }
 
  }
  /* Sonuc Olayı */
+
+ function kazan(){
+     oyuncu = oyuncu+1;
+     mesaj.innerHTML="Tebrikler Kazandınız";
+     oyuncu_skor.innerHTML=oyuncu.toString();
+ }
+
+ function kaybet(){
+    bilgisayar = bilgisayar+1;
+    mesaj.innerHTML="Bilgisayar Kazandı";
+    bilgisayar_skor.innerHTML=bilgisayar.toString();
+}
+
+function berabere(){
+  
+    mesaj.innerHTML="Berabere";
+
+}
