@@ -51,8 +51,9 @@
     color: black;
   }
   .tetik {
-    background-color: black;
-    border-radius: 0px;
+    background-color: darkgrey;
+    border: 5px solid black;
+    border-radius: 125px;
   }
   .buton-grup {
     margin: 20px 0px;
