@@ -35,17 +35,25 @@ function geriSay(){
 
 programla.addEventListener("click", ()=> {
     saniye.innerHTML = deger.value;
+    durum.classList.remove("gorun");
 });
 
+var x;
 baslat.addEventListener("click", ()=> {
-    setInterval(geriSay, 1000);
+   x = setInterval(geriSay, 1000);
     function geriSay(){
         var snDegeri = Number(saniye.textContent);
         if(snDegeri > 0){
             snDegeri=snDegeri-1;
             saniye.innerHTML = snDegeri.toString();
+            kutu.classList.toggle("tetik");
         } else{
-            clearInterval();
+            clearInterval(x);
+            durum.classList.add("gorun");
         }
     }
+});
+
+durdur.addEventListener("click", () =>{
+    clearInterval(x);
 });
