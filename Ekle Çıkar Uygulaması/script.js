@@ -15,7 +15,37 @@ parcalar.forEach((eleman,index)=>{
 //console.log(eleman  + " " index); her ikisini yazdırabiliyoruz.
 degisim.innerHTML+= `<div class="alert alert-danger" role="alert">${index}.index: ${eleman}</div>`
 });
+
 ekle_btn.addEventListener("click", function(){
     //parcalar.push("Zehra");
     //console.log(parcalar);
-})
+    parcalar.push(ekle.value);
+    //console.log(parcalar);
+    degisim.innerHTML="";
+    parcalar.forEach((eleman,index)=>{
+        degisim.innerHTML+= `<div class="alert alert-danger" role="alert">${index}.index: ${eleman}</div>`
+        });
+    
+});
+
+kaldir.addEventListener("click", ()=> {
+    parcalar.pop();
+    //console.log(parcalar);
+    degisim.innerHTML="";
+    parcalar.forEach((eleman,index)=>{
+        degisim.innerHTML+= `<div class="alert alert-danger" role="alert">${index}.index: ${eleman}</div>`
+        });
+});
+
+ekle_btn1.addEventListener("click", function(){
+    //parcalar.push("Zehra");
+    //console.log(parcalar);
+    parcalar.unshift(ekle.value);
+    //console.log(parcalar);
+    degisim.innerHTML="";
+    parcalar.forEach((eleman,index)=>{
+        degisim.innerHTML+= `<div class="alert alert-danger" role="alert">${index}.index: ${eleman}</div>`
+        });
+    
+});
+
