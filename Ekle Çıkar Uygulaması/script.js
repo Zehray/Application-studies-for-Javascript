@@ -49,3 +49,12 @@ ekle_btn1.addEventListener("click", function(){
     
 });
 
+kaldir1.addEventListener("click", ()=> {
+    parcalar.shift();
+    //console.log(parcalar);
+    degisim.innerHTML="";
+    parcalar.forEach((eleman,index)=>{
+        degisim.innerHTML+= `<div class="alert alert-danger" role="alert">${index}.index: ${eleman}</div>`
+        });
+});
+
