@@ -55,6 +55,7 @@ bastanelemanKaldir.addEventListener("click",()=>{
 /* Uygulama 2 Kodları */
 var sirala = document.getElementsByClassName("sirala")[0];
 var degisim=document.getElementById("degisim");
+var kesit = document.getElementsByClassName("kesit")[0];
 const veriler = ["Mehmet", "Zehra", "Nurda", "Yıldız", "Hıdır"];
 veriler.forEach((element)=>{
     degisim.innerHTML += `<div class="alert alert-danger">${element}</div>`
@@ -63,6 +64,13 @@ veriler.forEach((element)=>{
 sirala.addEventListener("click", ()=>{
     degisim.innerHTML="";
     veriler.sort().reverse().forEach((element)=>{
+        degisim.innerHTML += `<div class="alert alert-danger">${element}</div>`
+    });
+});
+
+kesit.addEventListener("click", ()=>{
+    degisim.innerHTML="";
+    veriler.slice(1,3).forEach((element)=>{
         degisim.innerHTML += `<div class="alert alert-danger">${element}</div>`
     });
 });
