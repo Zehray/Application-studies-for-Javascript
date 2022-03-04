@@ -58,4 +58,11 @@ var degisim=document.getElementById("degisim");
 const veriler = ["Mehmet", "Zehra", "Nurda", "Yıldız", "Hıdır"];
 veriler.forEach((element)=>{
     degisim.innerHTML += `<div class="alert alert-danger">${element}</div>`
-})
+});
+
+sirala.addEventListener("click", ()=>{
+    degisim.innerHTML="";
+    veriler.sort().reverse().forEach((element)=>{
+        degisim.innerHTML += `<div class="alert alert-danger">${element}</div>`
+    });
+});
