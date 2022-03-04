@@ -56,6 +56,7 @@ bastanelemanKaldir.addEventListener("click",()=>{
 var sirala = document.getElementsByClassName("sirala")[0];
 var degisim=document.getElementById("degisim");
 var kesit = document.getElementsByClassName("kesit")[0];
+var birlestir = document.getElementsByClassName("birlestir")[0];
 const veriler = ["Mehmet", "Zehra", "Nurda", "Yıldız", "Hıdır"];
 veriler.forEach((element)=>{
     degisim.innerHTML += `<div class="alert alert-danger">${element}</div>`
@@ -71,6 +72,14 @@ sirala.addEventListener("click", ()=>{
 kesit.addEventListener("click", ()=>{
     degisim.innerHTML="";
     veriler.slice(1,3).forEach((element)=>{
+        degisim.innerHTML += `<div class="alert alert-danger">${element}</div>`
+    });
+});
+
+birlestir.addEventListener("click", ()=>{
+    degisim.innerHTML="";
+    degisim.innerHTML = dizi.concat(veriler).join("*");
+    dizi.concat(veriler).forEach((element)=>{
         degisim.innerHTML += `<div class="alert alert-danger">${element}</div>`
     });
 });
